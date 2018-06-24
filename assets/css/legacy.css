@@ -544,3 +544,11 @@ table.pt-table td.numeric {
 .btn-outline-dark  {
 	border: 5px;
 }
+.tooltip-inner {
+    max-width: 600px;
+    /* If max-width does not work, try using width instead */
+    width: 600px; 
+	font-size:14px;
+	padding: 10px;
+	background-color: #343a40;
+}

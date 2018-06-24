@@ -9,11 +9,19 @@
 		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	    <link rel="stylesheet" type="text/css" href="assets/css/legacy.css" />
 <script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" integrity="sha384-u/bQvRA/1bobcXlcEYpsEdFVK/vJs3+T+nXLsBYJthmdBuavHvAW6UsmqO2Gd/F9" crossorigin="anonymous"></script>			
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" integrity="sha384-u/bQvRA/1bobcXlcEYpsEdFVK/vJs3+T+nXLsBYJthmdBuavHvAW6UsmqO2Gd/F9" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="lib/config.js"></script>
 		<script type="text/javascript" src="lib/rtme.js"></script>
+	    <script type="text/javascript">
+
+	        $(document).ready(function() {
+
+			});
+			
+		</script>
 	</head>
 	<body>
 			<div id="app">
@@ -21,31 +29,34 @@
 					<div class="grid">
 							<div class="centered">
 								<div class="Example">
-									<h1> TASK EXAMPLE:</h1>
-									<p>Here is an example of the task. The correct answer is: <strong>Panicked.</strong> Try hovering over the options.</p>
+									<h1 id='mainTitle'>LOADING...</h1>
+									<p><span id='instructions'></span></p>
 									<div class="round">
 										<div class="content">
 											<div class="task" style="margin-left: 10rem; margin-bottom: 5rem; margin-top: 2rem;">
-												<span class="pt-popover-target left" id="rtme-nw"  data-tooltip="Only $5 one-time payment!">
-													<button id='taboo' data-toggle="tooltip" data-html="true" title="<em>Tooltip</em><BR> <u>with</u> <b>HTML</b>" data-placement="top" data-boundary="window" data-trigger="hover" style="font-size:20px" class="btn btn-outline-dark pt-button pt-minimal pt-large btn-lg">Jealous</button>
+												<span class="pt-popover-target left"  data-tooltip="Only $5 one-time payment!">
+													<button id="bt-nw" data-toggle="tooltip" data-html="true" title="Please, wait" data-delay="10" data-placement="top" data-boundary="window" data-trigger="hover" style="font-size:20px;" class="btn btn-outline-dark pt-button pt-minimal pt-large btn-lg">...</button>
 												</span>
 												<span class="pt-popover-target right" id="rtme-ne">
-													<button style="font-size:20px" class="btn btn-outline-dark pt-button pt-minimal pt-large btn-lg" tabindex="0">Panicked</button>
+													<button id="bt-ne" data-toggle="tooltip" data-html="true" title="Please, wait" data-delay="10" data-placement="top" data-boundary="window" data-trigger="hover" style="font-size:20px" class="btn btn-outline-dark pt-button pt-minimal pt-large btn-lg" tabindex="0">...</button>
 												</span>
-												<div class="task-stimulus">
-													<img src="assets/images/faces/RMET_Practise.png" class="task-image">
+												<div id='main-image-div' class="task-stimulus" >
+													<img data-index='0' id='main-image' src="assets/images/faces/RMET_Face00.png" class="task-image">
 												</div>
 												<span class="pt-popover-target left" id="rtme-sw">
-													<button style="font-size:20px" class="btn btn-outline-dark pt-button pt-minimal pt-large btn-lg" tabindex="0">Arrogant</button>
+													<button id="bt-sw" data-toggle="tooltip" data-html="true" title="Please, wait" data-delay="10" data-placement="bottom" data-boundary="window" data-trigger="hover" style="font-size:20px" class="btn btn-outline-dark pt-button pt-minimal pt-large btn-lg" tabindex="0">...</button>
 												</span>
 												<span class="pt-popover-target right" id="rtme-se">
-													<button style="font-size:20px" class="btn btn-outline-dark pt-button pt-minimal pt-large btn-lg" tabindex="0">Hateful</button>
+													<button id="bt-se" data-toggle="tooltip" data-html="true" title="Please, wait" data-delay="10" data-placement="bottom" data-boundary="window" data-trigger="hover" style="font-size:20px" class="btn btn-outline-dark pt-button pt-minimal pt-large btn-lg" tabindex="0">...</button>
 												</span>
 											</div>
 										</div>
 									</div>
-									<button type="button" class="btn btn-secondary btn-lg"><< Previous</button>
-									<button type="button" class="btn btn-secondary btn-lg"/>Next >></button>
+									<form id='main-form'>
+										<input type='hidden'/>
+										<!--button type="button" class="btn btn-secondary btn-lg"><< Previous</button>
+										<button type="button" class="btn btn-secondary btn-lg"/>Next >></button-->
+									</form>
 								</div>
 							</div>
 					</div>
